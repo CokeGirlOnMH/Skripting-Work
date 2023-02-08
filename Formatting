@@ -1,0 +1,17 @@
+function formatcomma(num: text) :: text:
+    if {_num} parsed as number is not set:
+        return "0"
+    set {_num::*} to {_num} split at "."
+    if length of {_num::1} > 3:
+        set {_num} to {_num::1}
+        return "%formatcomma(first length of {_num} - 3 characters of {_num})%,%last 3 characters of {_num}%"
+    else:
+        return {_num}
+
+function format(n: number) :: text:
+   set {_data} to "QT,18|Q,15|T,12|B,9|M,6|k,3"
+   loop split {_data} at "|":
+      set {_s::*} to split loop-value at ","
+      {_n} >= 10 ^ {_s::2} parsed as number
+      return "%{_n} / 10 ^ {_s::2} parsed as number%%{_s::1}%"
+   return "%{_n}%"
