@@ -1,0 +1,12 @@
+#----------------------------------------#
+#                                        #
+#      Discord: luna is back.#7570       #
+#                                        #
+#----------------------------------------#
+
+on right click with egg:
+    cancel event
+    make 10 of poof at location of target block
+    set {_blocks::*} to blocks in radius 2 of target block where [input = white concrete] # change white concrete to whatever block you want to replace! 
+    loop {_blocks::*}:
+        set block at loop-value to bedrock
