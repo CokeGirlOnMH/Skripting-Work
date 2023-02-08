@@ -1,0 +1,9 @@
+#----------------------------------------#
+#                                        #
+#      Discord: luna is back.#7570       #
+#                                        #
+#----------------------------------------#
+
+on placeholderapi placeholder request for the prefix "skript": # the first thing you will use, example: "%skript_<id>%"
+    if the identifier is "balance": # the "<id>" in the example above
+        set the result to "%{balance::%uuid of player%}%" # what the placeholder will return
