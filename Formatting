@@ -1,3 +1,9 @@
+#----------------------------------------#
+#                                        #
+#      Discord: luna is back.#7570       #
+#                                        #
+#----------------------------------------#
+
 function formatcomma(num: text) :: text:
     if {_num} parsed as number is not set:
         return "0"
